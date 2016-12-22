@@ -1,0 +1,16 @@
+﻿<Window x:Class="WPF_Example_001.ComputerName_Tab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Example_001"
+        mc:Ignorable="d"
+        Title="ComputerName_Tab" Height="300" Width="300">
+    <Grid>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="32" Margin="46,204,0,0" VerticalAlignment="Top" Width="32" Source="C:\GitRepos\PowershellTools\WPF\WPF-Example-001\Resources\GitHub-Mark-32px.png"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="67" Margin="27,18,0,0" TextWrapping="Wrap" Text="This is the official MC Automation tool. To begin using this Tool, first verify the system is online, and then progress to any of the above tabs." VerticalAlignment="Top" Width="225"/>
+        <TextBox x:Name="ComputerName" HorizontalAlignment="Left" Height="19" Margin="27,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="225"/>
+        <Button x:Name="Verify_button" Content="Button" HorizontalAlignment="Left" Height="20" Margin="163,153,0,0" VerticalAlignment="Top" Width="71"/>
+
+    </Grid>
+</Window>

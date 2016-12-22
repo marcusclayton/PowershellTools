@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Example_001"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="345" Width="450">
     <Grid>
-        
+        <TabControl x:Name="tabControl">
+            <TabItem Header="Welcome" Margin="-2,-2,-9,0">
+                <Grid Background="#FFE5E5E5">
+                        <Image x:Name="image1" HorizontalAlignment="Left" Height="32" Margin="46,204,0,0" VerticalAlignment="Top" Width="32" Source="C:\GitRepos\PowershellTools\WPF\WPF-Example-001\Resources\GitHub-Mark-32px.png"/>
+                        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="67" Margin="27,18,0,0" TextWrapping="Wrap" Text="This is the official MC Automation tool. To begin using this Tool, first verify the system is online, and then progress to any of the above tabs." VerticalAlignment="Top" Width="225"/>
+                        <TextBox x:Name="ComputerName" HorizontalAlignment="Left" Height="19" Margin="27,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="225"/>
+                    <Button x:Name="Verify_button" Content="Button" HorizontalAlignment="Left" Height="20" Margin="163,153,0,0" VerticalAlignment="Top" Width="71"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tab-Activity-1" Margin="12,0,-50,-2">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="Load_diskinfo_button" Content="get-DiskInfo" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="77"/>
+                    <ListView x:Name="disk_listView" HorizontalAlignment="Left" Height="115" Margin="10,40,0,0" VerticalAlignment="Top" Width="325" RenderTransformOrigin="0.498,0.169">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Drive Letter" DisplayMemberBinding ="{Binding 'Drive Letter'}" Width="80"/>
+                                <GridViewColumn Header="Drive Label" DisplayMemberBinding ="{Binding 'Drive Label'}" Width="80"/>
+                                <GridViewColumn Header="Size(MB)" DisplayMemberBinding ="{Binding Size(MB)}" Width="80"/>
+                                <GridViewColumn Header="FreeSpace%" DisplayMemberBinding ="{Binding FreeSpace%}" Width="80"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+    </TabItem>
+            <TabItem Header="Tab-Activity-2" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="84" Margin="53,0,-53,0">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="233*"/>
+                        <ColumnDefinition Width="203*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tab-Activity-3" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="106" Margin="57,0,-57,0">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="411*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
